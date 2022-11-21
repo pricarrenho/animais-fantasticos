@@ -8,6 +8,7 @@ import initDropdownMenu from "./dropdown-menu.js";
 import outsideClick from "./outsideClick.js";
 import initMenuMobile from "./menu-mobile.js";
 import initAnimaNumbers from "./anima-numbers.js";
+import initFuncionamento from "./funcionamento.js";
 
 initScrollSuave();
 initAnimacaoScroll();
@@ -19,3 +20,4 @@ initDropdownMenu();
 outsideClick();
 initMenuMobile();
 initAnimaNumbers();
+initFuncionamento();
