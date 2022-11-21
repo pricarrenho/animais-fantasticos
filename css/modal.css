@@ -16,11 +16,11 @@
 }
 
 .modal {
-  background: white;
+  background: #fff;
   min-width: 300px;
   padding: 40px;
   border: 10px solid #fb5;
-  box-shadow: 0 0 0 10px white;
+  box-shadow: 0 0 0 10px #fff;
   position: relative;
 }
 
@@ -44,13 +44,13 @@
   right: -30px;
   width: 50px;
   height: 50px;
-  border: 4px solid white;
+  border: 4px solid #fff;
   border-radius: 50%;
   background: #e54;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
   position: absolute;
   font-size: 1.2rem;
-  color: white;
+  color: #fff;
   font-family: "IBM Plex Mono", monospace;
   cursor: pointer;
 }
@@ -75,7 +75,7 @@
   border-radius: 4px;
   padding: 0.7rem 2rem;
   font-size: 1rem;
-  color: white;
+  color: #fff;
   font-family: "IBM Plex Mono", monospace;
   margin-top: 16px;
   font-weight: bold;
