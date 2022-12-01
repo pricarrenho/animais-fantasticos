@@ -1,26 +1,34 @@
-export default function initModal() {
+function openModal(event, containerModal) {
+  event.preventDefault();
+  containerModal.classList.add("ativo");
+}
+
+function closeModal(event, containerModal) {
+  event.preventDefault();
+  containerModal.classList.remove("ativo");
+}
+
+function clickOutModal(event) {
+  if (event.target === this) {
+    closeModal(event);
+  }
+}
+
+export default function modal() {
   const buttonOpen = document.querySelector('[data-modal="abrir"]');
   const buttonClose = document.querySelector('[data-modal="fechar"]');
   const containerModal = document.querySelector('[data-modal="container"]');
+  const enableFunction = buttonOpen && buttonClose && containerModal;
 
-  if (buttonOpen && buttonClose && containerModal) {
-    function openModal(event) {
-      event.preventDefault();
-      containerModal.classList.add("ativo");
-    }
-    function closeModal(event) {
-      event.preventDefault();
-      containerModal.classList.remove("ativo");
-    }
+  if (!enableFunction) return;
 
-    function clickOutModal(event) {
-      if (event.target === this) {
-        closeModal(event);
-      }
-    }
+  buttonOpen.addEventListener("click", (event) =>
+    openModal(event, containerModal)
+  );
 
-    buttonOpen.addEventListener("click", openModal);
-    buttonClose.addEventListener("click", closeModal);
-    containerModal.addEventListener("click", clickOutModal);
-  }
+  buttonClose.addEventListener("click", (event) =>
+    closeModal(event, containerModal)
+  );
+
+  containerModal.addEventListener("click", clickOutModal);
 }
